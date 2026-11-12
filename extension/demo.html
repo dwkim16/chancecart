@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChanceCart · Test kitchen</title>
+    <link rel="stylesheet" href="ui.css">
+    <script src="content.js" defer></script>
+    <script src="demo.js" defer></script>
+  </head>
+  <body class="demo-page">
+    <header class="demo-header"><div class="brand"><span class="brand-mark" aria-hidden="true">c.</span><div><strong>ChanceCart</strong><span class="eyebrow">The test kitchen</span></div></div><a href="popup.html" target="_blank" rel="noopener">Set your chance ↗</a></header>
+    <main>
+      <section class="demo-hero"><span class="demo-pill">FICTIONAL MENU · NO REAL PURCHASES</span><h1>All the browsing.<br>A little room for chance.</h1><p>Build a cart, enjoy choosing, and try your checkout odds. This kitchen is a simulation: no restaurants, payments, or delivery requests.</p></section>
+      <div class="demo-layout">
+        <section aria-labelledby="menu-heading"><div class="section-label"><h2 id="menu-heading">Something for right now</h2><span>Made up. Still a good menu.</span></div><div id="menu" class="menu-grid"></div></section>
+        <aside class="cart-card" aria-labelledby="cart-heading"><h2 id="cart-heading">Your little order</h2><p class="cart-subtitle">A sample cart for trying the idea.</p><div id="cart-items" aria-live="polite"></div><div class="cart-totals"><div><span>Subtotal</span><span id="subtotal">$0.00</span></div><div><span>Delivery &amp; service</span><span id="fees">$0.00</span></div><div><span>Sample tax (9%)</span><span id="tax">$0.00</span></div><div><label for="tip">Tip</label><select id="tip" class="tip-select"><option value="0">$0.00</option><option value="200" selected>$2.00</option><option value="300">$3.00</option></select></div><div class="total-line"><span>Total</span><span id="total">$0.00</span></div></div><div class="gate-preview"><strong id="demo-chance">Loading your chance…</strong><span id="demo-session">One draw. Your result stays until you reset.</span></div><form id="checkout-form"><button id="place-order" type="submit" class="button button-primary">Place order</button></form><p class="demo-helper">The gate appears before checkout. After an allowed draw, click again to finish this simulation.</p><p id="demo-result" class="demo-result" role="status" aria-live="polite"></p><p class="demo-counter">Simulated checkouts: <span id="demo-submissions">0</span> · Real charges: $0.00</p><div class="demo-reset-row"><button id="demo-reset" type="button" class="text-button muted-button">Reset demo session</button><a href="popup.html" target="_blank" rel="noopener">Change odds ↗</a></div></aside>
+      </div>
+    </main>
+    <footer class="demo-footer"><p><strong>A lightweight proof of concept.</strong> Settings and the random decision stay in this browser. No backend, account, analytics, or automatic purchases. The experimental website adapter supports selected desktop Uber Eats checkout buttons; this demo does not verify the live website.</p></footer>
+  </body>
+</html>

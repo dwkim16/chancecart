@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChanceCart settings</title>
+    <link rel="stylesheet" href="ui.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body class="popup-page">
+    <main class="popup-shell">
+      <header class="brand"><span class="brand-mark" aria-hidden="true">c.</span><div><strong>ChanceCart</strong><span class="eyebrow">A little pause before checkout</span></div><span class="poc-label">POC</span></header>
+      <section class="intro"><h1>Your cart. Your chance.</h1><p>Enjoy the menu. Let your chosen odds decide whether checkout opens.</p></section>
+      <form id="chance-form" class="setting-card">
+        <label for="probability">Chance of allowing checkout</label>
+        <div class="percent-row"><input id="probability" name="probability" type="number" min="0" max="100" step="1" value="50" required inputmode="numeric"><span aria-hidden="true">%</span><span class="percent-caption">you choose the odds</span></div>
+        <label class="sr-only" for="probability-range">Chance of allowing checkout slider</label>
+        <input id="probability-range" type="range" min="0" max="100" step="1" value="50">
+        <div class="range-labels" aria-hidden="true"><span>Always pause</span><span>Always allow</span></div>
+        <button id="save" class="button button-primary" type="submit">Save chance</button>
+        <p id="setting-help" class="small">One draw per demo session. Refreshing keeps the result.</p>
+      </form>
+      <section class="session-card" aria-labelledby="session-heading"><span class="status-dot" id="status-dot" aria-hidden="true"></span><div><h2 id="session-heading">Loading session…</h2><p id="session-detail">Your settings stay in this browser.</p></div></section>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      <div class="action-stack"><button id="open-demo" type="button" class="button button-secondary">Try the demo <span aria-hidden="true">↗</span></button><button id="open-uber" type="button" class="text-button">Open Uber Eats website ↗</button><button id="reset" type="button" class="text-button muted-button">Reset demo session</button></div>
+      <footer><strong>No automatic purchases.</strong> A successful draw unlocks normal checkout. You still place the order yourself.<p>Experimental desktop extension for one website. No accounts, server, or analytics.</p></footer>
+    </main>
+  </body>
+</html>
